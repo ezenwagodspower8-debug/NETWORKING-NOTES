@@ -24,12 +24,18 @@ Modern deployment, containment, and transit models used to design secure virtual
 * **VPC Gateway & VPC NAT Gateway:** Structural entryways managing inbound internet routing and allowing private subnet resources to reach the internet safely.
 * **VPC Endpoint:** Establishes private, secure connections to cloud services without exposing traffic to the public internet.
 
-## 💻 Command Prompt for Network Troubleshooting & Auditing
-Hands-on validation, diagnostic execution, and security auditing using native command-line interface tools:
-* `ipconfig` - Audits local network interface cards, subnets, and active default gateways.
-* `ping 127.0.0.1` - Tests local loopback to verify your computer's internal TCP/IP stack configuration.
-* `ping [Default Gateway]` - Tests physical connectivity to the local network edge (your router).
-* `ping 8.8.8.8` - Tests external packet transmission viability via Google's public DNS servers.
-* `tracert 8.8.8.8` - Traces every hop router path to isolate where traffic drops occur across the WAN.
-* `nslookup` - Interrogates DNS servers to audit name-to-IP resolution mechanics.
-* `netstat` - Audits all active network connections, routing tables, and listening daemon ports on the system.
+## 💻 The 10 Core Network Command Prompt Utilities
+The definitive suite of native command-line interface tools used for network diagnostics, security auditing, and verification. (Use the `/?` help switch after any command to view its hidden variety configurations and flags).
+
+1. `ipconfig` — Audits local network interface cards, subnets, and active default gateways.
+2. `ping` — Tests device connectivity (tested via loopback 127.0.0.1, the default gateway, and external 8.8.8.8).
+3. `tracert` — Traces every hop router path to isolate where traffic drops occur across the WAN.
+4. `nslookup` — Interrogates DNS servers to audit name-to-IP resolution mechanics.
+5. `netstat` — Audits all active network connections, routing tables, and listening daemon ports on the system.
+6. `arp` — Reveals the local network table mapping IP addresses to physical MAC hardware addresses.
+7. `route` — Displays and manipulates your computer's internal network traffic routing tables.
+8. `hostname` — Instantly prints out the unique network identification name of your computer.
+9. `pathping` — A hybrid tool that combines ping and tracert to pinpoint exact packet loss locations.
+10. `nbtstat` — Troubleshoots NetBIOS over TCP/IP name resolutions on legacy infrastructure networks
+11. `nbtstat` — Troubleshoots NetBIOS over TCP/IP name resolutions on legacy infrastructure networks.
+
