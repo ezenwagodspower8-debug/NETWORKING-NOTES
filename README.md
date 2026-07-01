@@ -24,8 +24,39 @@ Modern deployment, containment, and transit models used to design secure virtual
 * **VPC Gateway & VPC NAT Gateway:** Structural entryways managing inbound internet routing and allowing private subnet resources to reach the internet safely.
 * **VPC Endpoint:** Establishes private, secure connections to cloud services without exposing traffic to the public internet.
 
+
+### ☁️ Cloud Architecture & Deployment Models
+*These models define the distribution of management responsibilities and the physical location of infrastructure in cloud computing.*
+
+#### 🏢 Cloud Service Models (The "As a Service" Frameworks)
+* **IaaS (Infrastructure as a Service):** The provider hosts the raw hardware, storage, and networking components. You are fully responsible for installing, securing, and maintaining the **Operating System (OS)** and applications.
+* **PaaS (Platform as a Service):** The provider manages the hardware and the underlying operating system. They deliver a ready-to-use sandbox framework specifically designed for **software developers** to deploy and run custom application code.
+* **SaaS (Software as a Service):** The provider completely builds, hosts, updates, and manages the entire software stack. End-users simply log into a **finished web application** (e.g., Microsoft 365, Gmail) via a browser.
+
+#### 🌐 Cloud Deployment Models (The Physical Environments)
+* **Public Cloud:** Computing resources are owned and operated by a third-party vendor (e.g., AWS, Azure, Google Cloud) and shared among multiple organizations over the public internet.
+* **Private Cloud:** Computing resources are completely dedicated to, owned by, and operated within a single organization's secure, internal data center.
+* **Hybrid Cloud:** A combined infrastructure architecture that securely connects private cloud resources with public cloud platforms to share data and applications.
+
+
+Core 20 Protocols & Port Dynamics
+
+A comprehensive reference guide for mastering core network protocols, port mappings, and transport layer mechanics required for the CompTIA Network+ exam.
+
+## 🛠️ Core Transport Mechanics
+
+### 1. Delivery Logic
+* **TCP (Transmission Protocol):** Connection-oriented. Establishes a session before sending data. Guarantees delivery, performs error-checking, and manages flow control. Slower due to overhead.
+* **UDP (User Datagram Protocol):** Connectionless. "Fire-and-forget" delivery logic. No handshake or delivery confirmation. Faster performance with minimal overhead.
+
+### 2. Connection Handshakes
+* **The 3-Way Handshake (TCP Establish):** SYN ➡️ SYN-ACK ➡️ ACK
+* **The 4-Way Handshake (TCP Teardown/Close):** FIN ➡️ ACK ➡️ FIN ➡️ ACK
+
+---
+
 ## 💻 The 10 Core Network Command Prompt Utilities
-The definitive suite of native command-line interface tools used for network diagnostics, security auditing, and verification. (Use the `/?` help switch after any command to view its hidden variety configurations and flags).
+The definitive suite of native command-line interface tools used for network diagnostics,troubleshooting, security auditing, and verification. (Use the `/?` help switch after any command to view its hidden variety configurations and flags).
 
 1. `ipconfig` — Audits local network interface cards, subnets, and active default gateways.
 2. `ping` — Tests device connectivity (tested via loopback 127.0.0.1, the default gateway, and external 8.8.8.8).
@@ -36,6 +67,66 @@ The definitive suite of native command-line interface tools used for network dia
 7. `route` — Displays and manipulates your computer's internal network traffic routing tables.
 8. `hostname` — Instantly prints out the unique network identification name of your computer.
 9. `pathping` — A hybrid tool that combines ping and tracert to pinpoint exact packet loss locations.
-10. `nbtstat` — Troubleshoots NetBIOS over TCP/IP name resolutions on legacy infrastructure networks
-11. `nbtstat` — Troubleshoots NetBIOS over TCP/IP name resolutions on legacy infrastructure networks.
+10. `nbtstat` — Troubleshoots NetBIOS over TCP/IP name resolutions on legacy infrastructure networks.
+
+
+
+## 🌐 Protocol & Port Master Matrix
+
+### Web & File Transfer
+
+| Protocol | Full Meaning | Port | Transport | Security Status | Architectural Vulnerability / Security Mechanism |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **HTTP** | Hypertext Transfer Protocol | 80 | TCP | ❌ Not Secure | Transmits data in cleartext; vulnerable to packet sniffing. |
+| **HTTPS** | Hypertext Transfer Protocol Secure | 443 | TCP | ✅ Secure | Encrypts all traffic using SSL/TLS algorithms. |
+| **FTP** | File Transfer Protocol | 20, 21 | TCP | ❌ Not Secure | Authentication credentials and data payloads move in cleartext. |
+| **SFTP** | Secure File Transfer Protocol | 22 | TCP | ✅ Secure | Encrypts both credentials and files inside an SSH tunnel. |
+| **TFTP** | Trivial File Transfer Protocol | 69 | UDP | ❌ Not Secure | Zero built-in security; no password authentication or encryption. |
+
+### Remote Management
+
+| Protocol | Full Meaning | Port | Transport | Security Status | Architectural Vulnerability / Security Mechanism |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **SSH** | Secure Shell | 22 | TCP | ✅ Secure | Uses public-key cryptography to encrypt command-line sessions. |
+| **Telnet** | Telecommunication Network | 23 | TCP | ❌ Not Secure | Transmits administrative credentials in plain text over the wire. |
+| **RDP** | Remote Desktop Protocol | 3389 | TCP | ✅ Secure | Uses built-in RSA/AES encryption to secure the graphical stream. |
+
+### Email
+
+| Protocol | Full Meaning | Port | Transport | Security Status | Architectural Vulnerability / Security Mechanism |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **SMTP** | Simple Mail Transfer Protocol | 25 | TCP | ❌ Not Secure | Relays messages between mail servers without transport encryption. |
+| **POP3** | Post Office Protocol v3 | 110 | TCP | ❌ Not Secure | Downloads email to host while exposing cleartext passwords. |
+| **IMAP** | Internet Message Access Protocol | 143 | TCP | ❌ Not Secure | Syncs mailboxes across endpoints but lacks default text encryption. |
+
+### Infrastructure & Directory Services
+
+| Protocol | Full Meaning | Port | Transport | Security Status | Architectural Vulnerability / Security Mechanism |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **DNS** | Domain Name System | 53 | Both | ❌ Not Secure | Queries are unencrypted; vulnerable to eavesdropping and spoofing. |
+| **DHCP** | Dynamic Host Config. Protocol | 67, 68 | UDP | ❌ Not Secure | No authentication; vulnerable to rogue servers and MITM attacks. |
+| **NTP** | Network Time Protocol | 123 | UDP | ❌ Not Secure | Lacks source validation; vulnerable to time tampering and DDoS amplification. |
+| **LDAP** | Lightweight Directory Access Protocol | 389 | TCP | ❌ Not Secure | Active Directory queries and network logins are sent in cleartext. |
+| **LDAPS** | Lightweight Directory Access Protocol Secure | 636 | TCP | ✅ Secure | Wraps directory communication inside an SSL/TLS tunnel. |
+
+### Management, Sharing & VoIP
+
+| Protocol | Full Meaning | Port | Transport | Security Status | Architectural Vulnerability / Security Mechanism |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **SNMP** | Simple Network Management Protocol | 161, 162 | UDP | ❌ Not Secure | Versions 1 and 2 pass passwords in plain text. (v3 adds encryption). |
+| **SMB** | Server Message Block | 445 | TCP | ❌ Not Secure | Legacy versions (SMBv1) lack encryption and contain exploits. (v3 encrypts). |
+| **Syslog** | System Log | 514 | UDP | ❌ Not Secure | Transmits highly sensitive network system logs completely unencrypted. |
+| **SIP** | Session Initiation Protocol | 5060, 5061 | Both | Mixed | Port 5060 sets up VoIP sessions in cleartext. Port 5061 uses TLS to encrypt. |
+
+---
+
+## 💡 Rapid Identification Mental Models
+
+1. **The "S" Suffix Rule:** If the acronym ends with **S**, it relies on **SSL/TLS encryption** (e.g., HTTPS, LDAPS).
+2. **The "S" Prefix Rule:** If it handles file or console interaction and begins with **S**, it relies on **SSH tunnel encryption** (e.g., SSH, SFTP).
+3. **The RDP Outlier:** **RDP (3389)** features no "S" in its name but natively enforces transport-layer encryption.
+4. **Core UDP Exceptions:** **DHCP (67/68)**, **TFTP (69)**, **NTP (123)**, **SNMP (161/162)**, and **Syslog (514)** do not establish TCP sessions due to overhead speed constraints or architectural limitations.
+
+
+
 
