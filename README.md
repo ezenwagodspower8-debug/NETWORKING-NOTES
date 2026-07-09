@@ -128,5 +128,38 @@ The definitive suite of native command-line interface tools used for network dia
 4. **Core UDP Exceptions:** **DHCP (67/68)**, **TFTP (69)**, **NTP (123)**, **SNMP (161/162)**, and **Syslog (514)** do not establish TCP sessions due to overhead speed constraints or architectural limitations.
 
 
+### 🌐 other Networking Protocols
+- **ICMP (Internet Control Message Protocol):** Learned how ICMP is used for network diagnostics, error reporting, and connectivity testing through tools like `ping`.
+- **GRE (Generic Routing Encapsulation):** Studied how GRE creates tunnels to encapsulate different network protocols across IP networks.
+- **IPsec (Internet Protocol Security):** Explored how IPsec secures network communications by providing confidentiality, integrity, and authentication.
+- **IKE Phase 1 & Phase 2:** Learned how Internet Key Exchange (IKE) negotiates secure connections and establishes cryptographic keys for IPsec tunnels.
+- **ESP (Encapsulating Security Payload):** Provides encryption, authentication, and data integrity for secure communication.
+- **AH (Authentication Header):** Provides authentication and integrity verification without encrypting the data.
+
+### 📡 Network Communication Methods
+- **Unicast:** One sender communicates with one receiver.
+- **Broadcast:** One sender communicates with every device on the local network.
+- **Multicast:** One sender communicates with a selected group of receivers.
+- **Anycast:** Multiple devices share the same address, and traffic is delivered to the nearest or best destination.
+
+### 🔌 Fiber Optic Networking
+- **Single-Mode Fiber (SMF):** Supports long-distance communication using a narrow core and laser light.
+- **Multi-Mode Fiber (MMF):** Designed for shorter distances using a wider core and LED or VCSEL light sources.
+- **Fiber Transceivers:** Learned how SFP, SFP+, and QSFP modules convert electrical signals into optical signals for fiber communication.
+
+### 🕸️ Network Topologies
+- **Bus Topology:** All devices share a single communication cable.
+- **Star Topology:** Devices connect through a central switch or hub.
+- **Ring Topology:** Devices form a circular path for data transmission.
+- **Mesh Topology:** Multiple redundant connections improve reliability and fault tolerance.
+
+### 🧮 Binary Mathematics
+- Strengthened my understanding of decimal-to-binary and binary-to-decimal conversions.
+- Practiced binary arithmetic and bit values used in IPv4 addressing and subnetting.
+
+### 🌍 IPv4 Addressing & Classful Subnetting
+- Learned the structure of IPv4 addresses and the purpose of subnet masks.
+- Studied Class A, Class B, and Class C networks and their default subnet masks.
+- Practiced identifying network and host portions of IP addresses using classful subnetting.
 
 
