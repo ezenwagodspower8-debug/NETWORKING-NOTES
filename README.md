@@ -152,6 +152,8 @@ The definitive suite of native command-line interface tools used for network dia
 - **Star Topology:** Devices connect through a central switch or hub.
 - **Ring Topology:** Devices form a circular path for data transmission.
 - **Mesh Topology:** Multiple redundant connections improve reliability and fault tolerance.
+- **Tree Topology:** A Hierarchy topology that connects multiple star networks, making it scalable for large oragnization
+- **Hybrid Topology:** A combination of two or more top[ology desinged to meet organization requirement 
 
 ### 🧮 Binary Mathematics
 - Strengthened my understanding of decimal-to-binary and binary-to-decimal conversions.
