@@ -163,5 +163,11 @@ The definitive suite of native command-line interface tools used for network dia
 - Learned the structure of IPv4 addresses and the purpose of subnet masks.
 - Studied Class A, Class B, and Class C networks and their default subnet masks.
 - Practiced identifying network and host portions of IP addresses using classful subnetting.
-
+- Learned the purpose of IPv4 subnet masks and how they separate network and host portions of an IP address.
+- Studied CIDR notation and converted prefix lengths into their corresponding subnet masks.
+- Calculated borrowed bits, remaining host bits, number of subnets, and usable hosts using subnetting formulas.
+- Identified the interesting octet and applied the Magic Number Method to determine subnet boundaries.
+- Practiced calculating network addresses, broadcast addresses, first usable hosts, and last usable hosts for Class B and Class C networks.
+- Strengthened subnetting skills through repeated hands-on exercises, improving both accuracy and confidence in subnet calculations.
+- Explored the concept of Seven-Second Subnetting and understood how subnetting speed techniques are built upon strong subnetting fundamentals.
 
