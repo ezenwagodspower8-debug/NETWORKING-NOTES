@@ -1080,3 +1080,36 @@ FHRP provides gateway redundancy.
 Subinterfaces allow multiple logical networks on one physical interface.
 These concepts are essential for network administration, cloud networking, and cybersecurity because attackers and defenders both depend on understanding how traffic moves through networks.
 
+NAT: Translates IP addresses between networks.
+
+NAT Overload (PAT): Allows multiple devices to share one public IP address using port numbers.
+
+VLAN: Logically divides a switched network into separate broadcast domains.
+
+VLAN Trunking: Carries traffic from multiple VLANs over one physical link.
+
+Native VLAN: The VLAN whose traffic travels untagged on an 802.1Q trunk by default.
+
+Link Aggregation: Combines multiple physical links into one logical link.
+
+STP (Spanning Tree Protocol): Prevents Layer 2 switching loops by blocking redundant paths.
+
+Rapid STP (RSTP): Provides faster recovery from network topology changes than STP.
+
+Band Steering: Encourages Wi-Fi devices to connect to a preferred frequency band.
+
+IBSS: A Wi-Fi ad hoc network where devices communicate without a central access point.
+
+SSID: The name of a Wi-Fi network.
+
+BSSID: Identifies a specific Wi-Fi Basic Service Set, typically by its radio’s MAC address.
+
+ESSID: The network name shared by access points in an Extended Service Set.
+
+Antenna: Transmits and receives electromagnetic waves for wireless communication.
+
+Wireless Mesh: A network where wireless nodes relay data between one another.
+
+MDF: The main telecommunications distribution point in a building.
+
+IDF: A secondary distribution point that connects local cabling to the main network.
